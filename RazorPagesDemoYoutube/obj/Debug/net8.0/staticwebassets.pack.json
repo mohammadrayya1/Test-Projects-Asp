@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\moham\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\noty.js",
+      "PackagePath": "staticwebassets\\noty.js"
+    },
+    {
+      "Id": "C:\\Users\\moham\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\toastr.js",
+      "PackagePath": "staticwebassets\\toastr.js"
+    },
+    {
       "Id": "L:\\C#-Projects\\RazorPagesDemo\\RazorPagesDemoYoutube\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RazorPagesDemoYoutube.bundle.scp.css",
       "PackagePath": "staticwebassets\\RazorPagesDemoYoutube.bundle.scp.css"
     },

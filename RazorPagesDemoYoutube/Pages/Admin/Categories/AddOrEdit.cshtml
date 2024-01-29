@@ -12,19 +12,30 @@
 	<form method="post">
 		<div class="card-body">
 			<div class="mb-3">
-				<label>@Html.LabelFor(c=>c.category.Name)</label>
-				<input asp-for="category.Name" type="text" class="form-control" />
+				<input  type="hidden" asp-for="categoryViewModel.CategoryId"   />
 
-				<span asp-validation-for="category.Name" class="text-danger"></span>
+				<label>@Html.LabelFor(c => c.categoryViewModel.Name)</label>
+				<input asp-for="categoryViewModel.Name" type="text" class="form-control" />
+
+				<span asp-validation-for="categoryViewModel.Name" class="text-danger"></span>
 			</div>
 			<div class="mb-3">
-				<label> @Html.LabelFor(c => c.category.OrderDispay)</label>
-				<input asp-for="category.OrderDispay" type="text" class="form-control" />
-				<span asp-validation-for="category.OrderDispay" class="text-danger"></span>
+				<label> @Html.LabelFor(c => c.categoryViewModel.OrderDispay)</label>
+				<input asp-for="categoryViewModel.OrderDispay" type="text" class="form-control" />
+				<span asp-validation-for="categoryViewModel.OrderDispay" class="text-danger"></span>
 			</div>
 		</div>
 		<div class="card-footer text-muted">
-		<button type="submit" class="btn btn-primary"> <i class="bi bi-check-circle"></i> Save</button>
+
+			@if (Model.categoryViewModel.CategoryId == null)
+			{
+				<button type="submit" class="btn btn-primary"> <i class="bi bi-check-circle" style="color:red"></i> Save</button>
+			}
+			else
+			{
+				<button type="submit" class="btn btn-primary"> <i class="bi bi-check-circle" style="color:green"></i> update</button>
+			}
+
 		</div>
 
 	</form>

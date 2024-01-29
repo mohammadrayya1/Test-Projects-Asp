@@ -3,20 +3,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RazorPagesDemoYoutube.Pages.Models
 {
-    public class Course
-    {
+	public class Course
+	{
 
-        [Key]
-        public Guid? CourseId { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public double Price { set; get; }
-        public DateTime PublishDate { get; set; }
-        public string ImageUrl { get; set; }
+		[Key]
+		public Guid? CourseId { get; set; }
+		public string Title { get; set; }
+		public string Description { get; set; }
+		public double Price { set; get; }
+		public DateTime PublishDate { get; set; }
+		public string ImageUrl { get; set; }
 
-        public Guid? CategoryId { get; set; }
+		public Guid? CategoryId { get; set; }
 
-        [ForeignKey ("CategoryId")]
-        public  Category Category {  get; set; }    
-    }
+		[ForeignKey("CategoryId")]
+		public Category Category { get; set; }
+
+		public String AuthorId { get; set; }
+
+		[ForeignKey("AuthorId")]
+		public AppUser appUser { set; get; }
+	}
 }
